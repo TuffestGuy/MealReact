@@ -17,12 +17,6 @@ function Nav() {
         <li class="nav-item">
           <NavLink class="nav-link" to="/portfolio" activeclassname="active">Portfolio</NavLink>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-sm-2" type="search" placeholder="Search" />
