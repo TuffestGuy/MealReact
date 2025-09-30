@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Login from './pages/Login';
 import Calculator from './pages/Calculator';
+import Adobo from './pages/Adobo';
 
 const NavBarLayout = () => (
   <>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/login" element={<Login />} />
           <Route path="/calculator" element={<Calculator />} />
+          <Route path="/adobo"element={<Adobo />} />
         </Route>
       </Routes>
     </Router>
