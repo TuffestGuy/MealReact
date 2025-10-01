@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios'
+import '../App.css';
 
 function Adobo(){
     const [recipe, setRecipe] = useState([]);
@@ -14,10 +15,22 @@ function Adobo(){
         })
     }, []);
 
-    return(
+     return(
         <div>
-            <h1>This is my recipe</h1>
-            <h2>{recipe.strMeal}</h2>
+            <img src={recipe.strMealThumb} alt="Adobo" width="500px" height="500px" className="center-img"/>
+            <div className="recipe-text-container">{recipe.strMeal}</div>
+            <div className="ingredients-container">
+            <h4>These are the ingredients needed:</h4>
+            <ul>
+                {Array.from({length: 20}, (_, i) => {
+                    const ingredient = recipe[`strIngredient${i+1}`];
+                    const measure = recipe[`strMeasure${i+1}`];
+                    return ingredient && ingredient.trim() !== "" ? (
+                        <li key={i}>{measure} {ingredient}</li>
+                    ) : null;
+                })}
+            </ul>
+         </div>
         </div>
     )
 }
